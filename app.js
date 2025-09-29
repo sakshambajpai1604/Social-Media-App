@@ -61,7 +61,7 @@ app.get('/edit/:id', isLoggedIn, async (req, res) => {
 
 app.post('/update/:id', isLoggedIn, async (req, res) => {
     let post = await postModel.findOneAndUpdate({_id: req.params.id}, {content: req.body.content})   
-    res.redirict("/profile");
+    res.redirect("/profile");
 }); 
 
 app.post('/post', isLoggedIn, async (req, res) => {
