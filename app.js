@@ -50,7 +50,7 @@ app.get('/like/:id', isLoggedIn, async (req, res) => {
     }
     
     await post.save();
-    res.redirect("/profile", {user});
+    res.redirect("/profile");
 });
 
 app.get('/edit/:id', isLoggedIn, async (req, res) => {
